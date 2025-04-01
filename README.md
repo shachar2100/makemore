@@ -90,16 +90,3 @@ The neural network's weights (**W**) are learned using **gradient-based optimiza
 1.  **Forward Pass:** The input bi-grams are processed through the neural network to obtain probability distributions for the next character. The negative log likelihood loss is calculated by comparing these predictions with the actual next characters in the training data.
 2.  **Backward Pass:** The gradients of the loss with respect to the network's weights are calculated using **backpropagation**.
 3.  **Parameter Update:** The weights are updated in the opposite direction of their gradients to reduce the loss. This process is repeated iteratively until the model converges to a satisfactory loss value.
-
-### Equivalence to Counting
-
-Interestingly, the neural network-based approach, when applied to a simple bi-gram model, essentially learns the same statistical relationships as the direct counting method. The weight matrix **W** in the neural network effectively becomes the log-counts of the bi-grams learned from the data.
-
-### Regularization
-
-**Regularization** techniques, such as adding a penalty to the loss function based on the magnitude of the weights, can be used to encourage the model's weights to be closer to zero. This is analogous to model smoothing and can help prevent overfitting.
-
-## Next Steps
-
-Future videos and development will focus on building more sophisticated neural network architectures that can consider longer sequences of previous characters to make more informed predictions. This will involve implementing models like MLPs, RNNs, and finally, the Transformer, to achieve more powerful language modeling capabilities.
-```
